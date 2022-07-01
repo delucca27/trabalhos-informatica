@@ -1,0 +1,24 @@
+header
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    background-color: #ffffffe0;
+    border-bottom: 1px solid #dddddd5e;
+    backdrop-filter: blur(58px);
+    margin: none;
+    margin-bottom: 24px;
+
+    .logotipo
+    {
+        margin: auto;
+
+        img
+        {
+            width: 100px;
+        }
+    }
+}
+

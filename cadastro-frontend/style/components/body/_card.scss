@@ -1,0 +1,20 @@
+.card-container
+{
+    background-color: #fff;
+    border: 1px solid #ddde;
+    backdrop-filter: blur(58px);
+    border-radius: 18px;
+
+    width: 510px;
+    height: 812px;
+    display: flex;
+    margin: auto;
+
+    .card-content {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+
+        width: 90%;
+    }
+}
