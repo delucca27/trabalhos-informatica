@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Cadastro de Aluno</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='style/main.css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <script defer async src='main.js'></script>
+    </head>
+    <body>
+        <div class="bg-cover">
+
+            <header>
+                <div class="logotipo">
+                    <img src="./assets/ifc-logo-vertical_2.png" alt="Logotipo vertical IFC Instituto Federal Catarinense">
+                </div>
+            </header>
+    
+            <main class="card-container">
+                <div class="card-content">
+                    <div class="searchbar">
+                        <input>
+                        <div class="controls-container">
+                            <button class="bt-add">
+                                +
+                            </button>
+    
+                            <button class="bt-search" style="font-size: 10px;">
+                                <img src="./assets/lupa.svg"></i>
+                            </button>
+                        </div>
+                    </div>
+        
+                    <div class="container-data">
+                        <template class="aluno">
+                            <div class="modal">
+                                <button class="bt-close">
+                                    <img src="./assets/close.svg" alt="X" srcset="">
+                                </button>
+                                <h1>Cadastrar Aluno</h1>
+                                <form>
+                                    <div>
+                                        <label for="nome">Nome</label>
+                                        <input name="nome" id="nome" type="text" placeholder="Sua resposta">
+                                    </div>
+                                    <div>
+                                        <label for="dataNasc">Data de Nascimento</label>
+                                        <input name="dataNasc" id="dataNasc" type="date">
+                                    </div>
+                                    <div>
+                                        <label for="matricula">Matrícula</label>
+                                        <input data-mascara="matricula" name="matricula" id="matricula" type="text" placeholder="Insira um código">
+                                    </div>
+                                </form>
+                                <div class="action">
+                                    <button>salvar</button>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </main>
+    
+        </div>
+    </body>
+</html>
