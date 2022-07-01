@@ -1,0 +1,198 @@
+/* SETUP GERAL & RESET */
+:root {
+    --color-a: #58d854;
+    --color-b: #f83800;
+    --color-c: #f8b800;
+    --color-d: #0078f8;
+
+    --bg-c: #000000;
+    --piscadela-c: #bcbcbc;
+
+    --title-c: #f8b800;
+    --pontuacao-c: #f8d878;
+
+    --popup-contagem-c: #fcfcfc; /* #881400 */
+    --popup-gameover-c: #f83800;
+    --popup-text-c: #fcfcfc; /* #fca044 */
+
+    /* --color-a: #12e269;
+    --color-b: #ed1f1f;
+    --color-c: #ffd323;
+    --color-d: #134deb; */
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0 none;
+}
+
+body {
+    background-color: var(--bg-c);
+}
+
+header {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* TYPO CONFIG */
+* {
+    font-family: 'Press Start 2P';
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Press Start 2P', 'Archivo Black', 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+
+    color: var(--title-c);
+}
+
+h2, .pontuacao {
+    font-family: 'Press Start 2P', 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+
+    color: var(--pontuacao-c);
+}
+
+main.contagem-container, main.gameover-container
+{
+    font-size: 42px;
+    color: var(--popup-text-c);
+}
+
+
+/* MAIN POP-UPS CONFIG */
+main.contagem-container, main.gameover-container
+{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    background-color: #000000;
+    border: 10px solid #fcfcfc;
+
+    width: 850px;
+    height: 550px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main.contagem-container div, main.gameover-container div
+{
+    margin-top: 50%;
+}
+
+main.contagem-container
+{
+    background-color: #000000;
+    color: var(--popup-contagem-c);
+    font-size: 120px;
+}
+
+main.contagem-container div 
+{
+    margin: auto;
+}
+
+
+main.gameover-container
+{
+    display: none;
+}
+
+main.gameover-container button#return-btn
+{
+    background-color: var(--popup-text-c);
+    color: var(--bg-c);
+
+    padding: 12px;
+
+    font-size: 22px;
+    cursor: pointer;
+}
+
+main.gameover-container button#return-btn:hover
+{
+    background-color: var(--title-c);
+}
+
+main.gameover-container > div
+{
+    margin-bottom: 220px;
+    margin-top: 150px;
+}
+
+
+/* MAIN JOGO-CONTAINER CONFIG */
+main.jogo-container {
+    height: 70vmin;
+    width: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 58%;
+    left: 50%;
+    display: none;
+}
+
+main.jogo-container > div {
+    width: 50%;
+    flex: none;
+    border: 3px solid #000;
+    /* border: 1px solid black; */
+}
+
+
+/* CORES DO GENIUS */
+main.jogo-container > div:nth-child(1) {
+    background-color: var(--color-a);
+    border-top-left-radius: 100%;
+}
+
+main.jogo-container > div:nth-child(2) {
+    background-color: var(--color-b);
+    border-top-right-radius: 100%;
+}
+
+main.jogo-container > div:nth-child(3) {
+    background-color: var(--color-c);
+    border-bottom-left-radius: 100%;
+}
+
+main.jogo-container > div:nth-child(4) {
+    background-color: var(--color-d);
+    border-bottom-right-radius: 100%;
+}
+
+@keyframes piscadela {
+    50% {
+        background-color: var(--piscadela-c);
+    }
+}
+
+main.jogo-container > div.animate {
+    /* background-color: white; */
+    /* usado no exemplo transition */
+    animation: piscadela .3s ease-in-out;
+    /* animation-name: piscadela;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; */
+}
